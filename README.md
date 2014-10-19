@@ -18,20 +18,20 @@ The module loader is about as simple as it gets. The module transpiler uses a mo
 
 If you're unfamiliar with [Ember's concept of a resolver](http://emberjs.com/api/classes/Ember.DefaultResolver.html), it's really just a way for Ember to find the classes it needs. Ember asks for a specific class (such as `route:index`) and it expects you to find it (for example, `App.IndexRoute`). Ember's default resolver looks for everything on the application's namespace, but we want to avoid that. So similar to Ember App Kit and Ember-CLI, our resolver looks for classes using the module system we defined. The included resolver looks for things in folders corresponding to their hierarchy in the route map. Some examples:
 
-Ember asks for: `route:users.profile.index`
-By default Ember uses: `App.UsersProfileIndexRoute`
+Ember asks for: `route:users.profile.index`<br>
+By default Ember uses: `App.UsersProfileIndexRoute`<br>
 Our resolver looks for: `routes/users/profile/index.js`
 
-Ember asks for: `controller:users.profile`
-By default Ember uses: `App.UsersProfileController`
+Ember asks for: `controller:users.profile`<br>
+By default Ember uses: `App.UsersProfileController`<br>
 Our resolver looks for: `controllers/users/profile.js`
 
-Ember asks for: `model:user`
-By default Ember uses: `App.User`
+Ember asks for: `model:user`<br>
+By default Ember uses: `App.User`<br>
 Our resolver looks for: `models/user.js`
 
-Ember asks for: `widget:foo.bar.none`
-By default Ember uses: `App.FooBarNoneWidget`
+Ember asks for: `widget:foo.bar.none`<br>
+By default Ember uses: `App.FooBarNoneWidget`<br>
 Our resolver looks for: `widgets/foo/bar/none.js`
 
 ## Caveats
