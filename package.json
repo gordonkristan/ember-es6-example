@@ -1,0 +1,8 @@
+{
+	"name": "ember-es6-example",
+	"devDependencies": {
+		"es6-module-jstransform": "gordonkristan/es6-module-jstransform",
+		"es6-transpiler": "0.7.17",
+		"fs-readdir-recursive": "0.0.2"
+	}
+}

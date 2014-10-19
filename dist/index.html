@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>Ember ES6 Example</title>
+
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css">
+	</head>
+	<body>
+		<div id="app"></div>
+
+		<script type="text/x-handlebars">
+			{{outlet}}
+		</script>
+
+		<script type="text/x-handlebars" data-template-name="index">
+			<a {{bind-attr style=style}}>
+				This text is currently {{selectedColor}}
+			</a>
+
+			<br>
+
+			<button {{action 'changeColor'}}>Change The Color</button>
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.3.0.js"></script>
+		<script src="http://builds.emberjs.com/tags/v1.7.0/ember.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
